@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			Usuario - Dulce Fresa
+		</title>
+
+        <!-- Estilo para mi tabla -->
+        <style>
+            table {
+              font-family: arial, sans-serif;
+              border-collapse: collapse;
+              width: 30%;
+            }
+            
+            td, th {
+              border: 1px solid #dddddd;
+              text-align: left;
+              padding: 8px;
+            }
+            
+            tr:nth-child(even) {
+              background-color: #FBD2A6;
+            }
+
+            h2,h1 {
+                color:#93496C;
+            }
+        </style>
+
+	</head>
+	<body>
+        <img src="logo_df.png">
+		<h1>Bienvenido</h1>
+		<h2><img src="alfresi.png"> Tenemos los siguientes Sabores de Pasteles:</h2>
+
+        <!-- El cliente de la pastelería necesita ver los diferentes sabores de pasteles, así como los precios de cada uno. -->
+        <table>
+            <tr>
+                <th>Sabor</th>
+                <th>Precio</th>
+            </tr>
+            <tr>
+                <th>Chocolate</th>
+                <th>$300</th>
+            </tr>
+            <th>Fresa (especialidad)</th>
+            <th>$380</th>
+            <tr>
+                <th>Cocoa</th>
+                <th>$250</th>
+            </tr>
+            <tr>
+                <th>Mazapan</th>
+                <th>$290</th>
+            </tr>
+            <tr>
+                <th>Frambuesa</th>
+                <th>$310</th>
+            </tr>
+            <tr>
+                <th>Cajeta</th>
+                <th>$260</th>
+            </tr>
+            <tr>
+                <th>Frutas</th>
+                <th>$260</th>
+            </tr>
+        </table>
+
+        <hr>
+        <h2><img src="alfresi.png"> También tenemos Adornos:</h2>
+
+        <!-- El cliente de la pastelería necesita ver los diferentes adornos con los que se puede decorar el pastel y los precios de cada uno. -->
+
+        <table>
+            <tr>
+                <th>Adornos</th>
+                <th>Precio</th>
+            </tr>
+            <tr>
+                <th>Nombre del festejado (máximo 10 letras)</th>
+                <th>$80</th>
+            </tr>
+            <tr>
+                <th>Personaje plano (sobre el pastel)</th>
+                <th>$120</th>
+            </tr>
+            <tr>
+                <th>Personaje de Fondant</th>
+                <th>$180</th>
+            </tr>
+            <tr>
+                <th>Flores de chantilly</th>
+                <th>$100</th>
+            </tr>
+            <tr>
+                <th>Perlas de chocolate dorado</th>
+                <th>$100</th>
+            </tr>
+        </table>
+
+        <!-- El cliente de la pastelería tendrá la posibilidad de combinar sabores dependiendo de sus preferencias. -->
+
+        <hr>
+        <h2><img src="alfresi.png"> Puedes combinar sabores, marca las casillas de los sabores que deseas (máximo 3).</h2>
+        <form>
+            <input type="checkbox" id="s_chocolate" name="s_chocolate" value="Chocolate">
+            <label for="s_chocolate"> Chocolate</label><br>
+            <input type="checkbox" id="s_fresa" name="s_fresa" value="Fresa">
+            <label for="s_fresa"> Fresa</label><br>
+            <input type="checkbox" id="s_cocoa" name="s_cocoa" value="Cocoa">
+            <label for="s_cocoa"> Cocoa</label><br>
+            <input type="checkbox" id="s_mazapan" name="s_mazapan" value="Mazapan">
+            <label for="s_mazapan"> Mazapan</label><br>
+            <input type="checkbox" id="s_frambuesa" name="s_frambuesa" value="Frambuesa">
+            <label for="s_frambuesa"> Frambuesa</label><br>
+            <input type="checkbox" id="s_cajeta" name="s_cajeta" value="Cajeta">
+            <label for="s_cajeta"> Cajeta</label><br>
+            <input type="checkbox" id="s_frutas" name="s_frutas" value="Frutas">
+            <label for="s_frutas"> Frutas</label><br>
+        </form>
+        
+        <!-- El cliente de la pastelería tendrá la posibilidad de combinar adornos dependiendo de sus preferencias. -->
+
+        <hr>
+        <h2><img src="alfresi.png"> Puedes combinar adornos, marca las casillas de los adornos que deseas.</h2>
+        <form>
+            <input type="checkbox" id="s_nombref" name="s_nombref" value="Nombre del festejado">
+            <label for="s_nombref"> Nombre del festejado</label><br>
+            <input type="checkbox" id="s_personajep" name="s_personajep" value="Personaje plano">
+            <label for="s_personajep"> Personaje plano</label><br>
+            <input type="checkbox" id="s_personajef" name="s_personajef" value="Personaje de Fondant">
+            <label for="s_personajef"> Personaje de Fondant</label><br>
+            <input type="checkbox" id="s_flores" name="s_flores" value="Flores de chantilly">
+            <label for="s_flores"> Flores de chantilly</label><br>
+            <input type="checkbox" id="s_perlas" name="s_perlas" value="Perlas">
+            <label for="s_perlas"> Perlas</label><br>
+        </form>
+        
+        <!--El cliente de la pastelería necesita poner en un formulario su pedido.
+            El formulario debe de contener los datos de contacto del cliente que son Nombre, Teléfono, Correo Electrónico, Descripción general del pastel y la selección de sabores y adornos. -->
+        
+        <hr>
+        <h2><img src="alfresi.png"> Formulario</h2>
+        <form action="/enviar_formulario.php">
+            <label for="nombre">Nombre completo:</label><br>
+            <input type="text" id="nombre" name="nombre" value=""><br>
+            <p></p>
+
+            <label for="telefono">Teléfono:</label><br>
+            <input type="text" id="telefono" name="telefono" value=""><br>
+            <p></p>
+
+            <label for="correo">Correo electrónico:</label><br>
+            <input type="text" id="correo" name="correo" value=""><br>
+            <p></p>
+
+            <label for="descripcionpastel">Descripción:</label><br>
+            <textarea name="descripcionpastel" rows="10" cols="30">Ingresa la descripción de tu pastel lo más clara posible.
+            </textarea>
+            <p></p>
+            
+            <label for="sel_sabores">Los sabores que elegiste son:</label><br>
+            <textarea name="sel_sabores" rows="10" cols="30">Chocolate, Fresa.
+            </textarea>
+            <p></p>
+            
+            <label for="sel_adornos">Los adornos que elegiste son:</label><br>
+            <textarea name="sel_adornos" rows="10" cols="30">Nombre del festejado, Perlas de chocolate dorado.
+            </textarea>
+            <p></p>
+            
+            <input type="submit" value="Enviar">
+        </form>
+
+        <hr>
+        <h2><img src="alfresi.png"> Contacto</h2>
+
+        <!-- La página debe tener información de la pastelería que es Dirección, Teléfono y horarios de atención. -->
+
+        <table>
+            <tr>
+                <th>Dirección</th>
+                <th>Avenida Reforma #210, Col. Centro - Puebla, Puebla</th>
+            </tr>
+            <tr>
+                <th>Teléfonos</th>
+                <th>(222) 2222222 / (222) 2222223</th>
+            </tr>
+            <tr>
+                <th>Horarios</th>
+                <th>Lunes a Viernes (9:00am -  8:00pm)<br>Sábados (9:00am - 5:00pm)<br>Domingos (9:00am - 3:00pm)</th>
+            </tr>
+        </table>
+	</body>
+</html>
